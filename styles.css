@@ -22,7 +22,7 @@ header {
     display: flex;
     align-items: center;
     padding: .5rem;
-    background-color: rgb(216, 216, 216);
+    background-color: #fce3cf;
 }
 
 /* Logotipo */
@@ -51,8 +51,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem;
-    background-color: rgb(37, 37, 37);
+    background-color: #472306;
     color: white;
     font-size: .8rem;
 }
@@ -61,6 +60,15 @@ footer {
 footer a {
     color: white;
     font-size: 1.2rem;
+    padding: .5rem;
+    border-top: 1px solid #472306;
+    border-bottom: 1px solid #472306;
+    transition: .2s;
+}
+
+footer a:hover {
+    background: white;
+    color: #472306;
 }
 
 /* Main */
@@ -72,24 +80,26 @@ main {
 main nav {
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    background-color: #f09042;
 }
 
 /* Ítens do menu principal */
 main nav a {
     /* Não permite a quebra da linha */
     white-space: nowrap;
-    padding: .8rem;
-    background-color: rgb(226, 226, 226);
-    margin: 0 3px 3px 3px;
-    color: black;
-    text-decoration: none;
+
     /* Tempo do efeito visual */
     transition: .2s;
+
+    padding: .8rem;
+    background-color: #fdf1e7;
+    margin: 0 3px 3px 3px;
+    color: #472306;
+    text-decoration: none;
     border-radius: .5rem;
 }
 
-/* Ícones do menu */ 
+/* Ícones do menu */
 main nav a i {
     font-size: 1.2rem;
 }
@@ -101,7 +111,7 @@ main nav a:first-child {
 
 /* Quando passar o mouse em cima */
 main nav a:hover {
-    background-color: black;
+    background-color: #472306;
     color: rgb(226, 226, 226);
 }
 
@@ -113,16 +123,42 @@ main nav span {
 /* Article */
 main article {
     padding: 0 1rem;
+    background-color: white;
 }
 
-/* Imagem do conteúdo */
+.img-center small {
+    display: block;
+}
+
 .img-center {
     display: table;
     margin: auto;
     text-align: center;
 }
 
-/* Legenda da imagem do conteúdo */;
-.img-center small {
-    display: block;
+/* Sticky footer e limitação da largura */
+
+.main-frame {
+
+    /* Sticky footer */
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* Limita largura da página */
+    min-width: 280px;
+    max-width: 1080px;
+    margin: auto;
+}
+
+/* Sticky footer */
+
+main {
+    flex-grow: 1;
+}
+
+/* Fundo da página */
+body {
+    background-color: #5e2f08;
 }
