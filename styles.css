@@ -2,6 +2,9 @@
 
 * {
     box-sizing: border-box;
+
+    /* Tempo do efeito visual */
+    transition: .1s;
 }
 
 html, body {
@@ -28,22 +31,31 @@ header {
 /* Logotipo */
 header img {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 6rem;
+    height: 6rem;
     margin-right: 1rem;
+    border-radius: .5rem;
 }
 
 /* Título */
 header h1 {
     text-align: center;
     margin: 0;
+    -webkit-text-stroke: 1px black;
+    color: orangered;
+    font-size: 2.5rem;
+    text-decoration: underline orange
 }
 
 /* Slogan */
 header small {
     display: block;
-    font-size: .95rem;
+    font-size: .97rem;
     font-weight: normal;
+    color: #472306;
+    -webkit-text-stroke: 1px transparent;
+    letter-spacing: .12rem;
+    text-decoration: underline #fce3cf;
 }
 
 /* Rodapé */
@@ -63,7 +75,6 @@ footer a {
     padding: .5rem;
     border-top: 1px solid #472306;
     border-bottom: 1px solid #472306;
-    transition: .2s;
 }
 
 footer a:hover {
@@ -80,16 +91,13 @@ main {
 main nav {
     display: flex;
     flex-direction: column;
-    background-color: #f09042;
+    background-color: #472306ad;
 }
 
 /* Ítens do menu principal */
 main nav a {
     /* Não permite a quebra da linha */
     white-space: nowrap;
-
-    /* Tempo do efeito visual */
-    transition: .2s;
 
     padding: .8rem;
     background-color: #fdf1e7;
@@ -123,7 +131,7 @@ main nav span {
 /* Article */
 main article {
     padding: 0 1rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .img-center small {
@@ -161,4 +169,9 @@ main {
 /* Fundo da página */
 body {
     background-color: #5e2f08;
+    background-image: url('img/bg/4426510.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
